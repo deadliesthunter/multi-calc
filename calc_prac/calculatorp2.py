@@ -1,11 +1,11 @@
 import re
-import math
+import math #not been use yet
 def mycalculator(operations):
     
-    tokens = re.findall(r'(\d+\.?\d*)|([+-/*\^])|(\w+)',operations)
+    tokens = re.findall(r'(\d+\.?\d*)|([+-/*\^])|(\w+)',operations) #token is used to separate the given expression into single unit
 
-    result = None
-    current_operator = None
+    result = None # used as accumulator(expression), current total
+    current_operator = None # it reads the operator 
 
     for token in tokens :
         if token.isdigit():
